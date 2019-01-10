@@ -1,8 +1,16 @@
-node {
-    stage("stage 1") {
-        echo "Hello"
-    }
-    stage("stage 2") {
-        echo "World!"
+pipeline {
+    agent any
+
+    stages {
+        stage('State 1') {
+            steps {
+                echo 'Hello'
+            }
+        }
+        stage('Stage 2') {
+            steps {
+                echo 'World!'
+            }
+        }
     }
 }
